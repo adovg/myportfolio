@@ -1,7 +1,6 @@
-import Image from "next/image";
+import Hero from "@/components/Hero";
 import styles from "./page.module.scss";
 import Footer from "@/components/Footer";
-import Hero from "./hero/page";
 
 export default function Home() {
   return (

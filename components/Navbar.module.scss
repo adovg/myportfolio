@@ -1,17 +1,28 @@
-// .container {
-//     max-width: 1200px;
-//     margin: 0 auto;
-//     padding: 0 20px;
-// }
-
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 10px;
-    margin-left: 60vw;
+    margin-left: 35vw;
 
-    position: sticky;
-    top: 0;
-    left: 0;
+    // position: sticky;
+    // top: 0;
+    // left: 0;
+}
+
+.nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.active {
+    background-color: var(--text-highlight);
+    color: #fff;
 }

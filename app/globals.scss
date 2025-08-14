@@ -1,17 +1,24 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --text-main: #171717;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+html.light {
+  --background-color: #ffffff;
+  --text-color: #171717;
   --text-secondary: #6c757d;
   --text-highlight: #007bff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html.dark {
+  --background-color: #121212;
+  --text-color: #ededed;
+  --text-secondary: #aaaaaa;
+  --text-highlight: #66b2ff;
 }
+
 
 html,
 body {
@@ -20,9 +27,10 @@ body {
 }
 
 body {
-  color: var(--background);
-  background: var(--foreground);
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -33,19 +41,13 @@ body {
   padding: 0 20px;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
 
 a {
-  color: inherit;
+  color: var(--text-color);
   text-decoration: none;
-}
 
-// @media (prefers-color-scheme: dark) {
-//   html {
-//     color-scheme: dark;
-//   }
-// }
+  &:hover,
+  :active {
+    color: var(--text-highlight);
+  }
+}
