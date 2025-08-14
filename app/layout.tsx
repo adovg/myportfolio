@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { ThemeProvider } from "@/app/context/Theme-context"; // Import the ThemeProvider
+import { ThemeProvider } from "@/context/Theme-context"; // Import the ThemeProvider
 import "./globals.scss";
 import Navbar from "@/components/Navbar";
 
