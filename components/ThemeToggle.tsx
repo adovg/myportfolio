@@ -1,13 +1,17 @@
 "use client";
 import { useContext } from "react";
-import { ThemeContext } from "@/app/context/Theme-context"; // Adjust the import path as necessary
+import { ThemeContext } from "@/app/context/Theme-context";
+import styles from "./ThemeToggle.module.scss";
+import { Sun, Moon } from "lucide-react";
 
 export const ThemeToggle = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <button onClick={toggleTheme}>
-      Переключить на {theme === "light" ? "тёмную" : "светлую"} тему
+    <button onClick={toggleTheme} className={styles.toggle__light}>
+      {theme === "light" ? <Moon /> : <Sun />}
     </button>
   );
 };
+
+<Sun />;
