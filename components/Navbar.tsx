@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.scss"; // Assuming you have a CSS module for styling
 import "../app/globals.scss"; // Import global styles if needed
 import { ThemeToggle } from "./ThemeToggle"; // Import the ThemeToggle component
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -27,6 +28,7 @@ const Navbar = () => {
           Some my works
         </Link>
         <ThemeToggle />
+        <LanguageSwitcher />
       </nav>
     </div>
   );
