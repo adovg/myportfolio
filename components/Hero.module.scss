@@ -1,0 +1,50 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    min-height: 80vh;
+    // max-width: 80rem;
+    // text-align: center;
+
+    span {
+        display: block;
+    }
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    line-height: 1;
+
+    @media (min-width: 640px) {
+        font-size: 3.75rem;
+    }
+}
+
+.title__gradient {
+    --tw-gradient-from: #B809A7;
+    --tw-gradient-to: rgba(184, 9, 167, 0.7);
+    --tw-gradient-stops: var(--tw-gradient-from),
+        #2563eb,
+        #9333ea,
+        #1e40af,
+        var(--tw-gradient-to);
+
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.hero h2 {
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+    font-weight: 500;
+
+    span {
+        margin-bottom: 2rem;
+    }
+}
