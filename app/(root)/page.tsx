@@ -4,9 +4,9 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className={`container ${styles.page}`}>
+    <div className={`${styles.page}`}>
       <Hero />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

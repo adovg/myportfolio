@@ -1,13 +1,15 @@
+.navbar__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 10px;
-    margin-left: 35vw;
-
-    // position: sticky;
-    // top: 0;
-    // left: 0;
+    gap: 20px;
 }
 
 .nav a {
@@ -25,4 +27,10 @@
 .active {
     background-color: var(--text-highlight);
     color: #fff;
+}
+
+.nav__toggles {
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }

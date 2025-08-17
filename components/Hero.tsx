@@ -7,7 +7,7 @@ import { translations } from "@/lib/translations";
 const Hero = () => {
   const { lang } = useContext(LanguageContext)!;
   return (
-    <div>
+    <div className="hero">
       <h1>{translations[lang].welcome}</h1>
       <p>{translations[lang].about}</p>
     </div>

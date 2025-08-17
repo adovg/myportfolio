@@ -10,7 +10,7 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 const Navbar = () => {
   const pathname = usePathname();
   return (
-    <div className="container">
+    <div className={styles.navbar__wrapper}>
       <nav className={styles.nav}>
         <Link href="/" className={pathname === "/" ? styles.active : ""}>
           About
@@ -27,9 +27,11 @@ const Navbar = () => {
         >
           Some my works
         </Link>
+      </nav>
+      <div className={styles.nav__toggles}>
         <ThemeToggle />
         <LanguageSwitcher />
-      </nav>
+      </div>
     </div>
   );
 };

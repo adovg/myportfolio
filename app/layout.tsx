@@ -4,6 +4,7 @@ import { AppProviders } from "@/context/AppProviders";
 import { ThemeProvider } from "@/context/Theme-context"; // Import the ThemeProvider
 import "./globals.scss";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,10 +28,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} container`}>
         <AppProviders>
           <Navbar />
-          {children}
+          <main>{children}</main>
+          <Footer />
         </AppProviders>
       </body>
     </html>
