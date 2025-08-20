@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
-import styles from "./Navbar.module.scss"; // Assuming you have a CSS module for styling
+import styles from "./Navbar.module.scss";
 import "../app/globals.scss"; // Import global styles if needed
 import { ThemeToggle } from "./ThemeToggle"; // Import the ThemeToggle component
 import { LanguageSwitcher } from "./LanguageSwitcher";

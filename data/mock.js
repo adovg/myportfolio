@@ -33,7 +33,8 @@ export const mockData = {
           { name: "TypeScript", level: 85, icon: "📘" },
           { name: "JavaScript ES6+", level: 95, icon: "📜" },
           { name: "HTML5/CSS3", level: 90, icon: "🎨" },
-          { name: "Tailwind CSS", level: 85, icon: "🎭" },
+          { name: "Tailwind CSS", level: 70, icon: "🎭" },
+          { name: "GSAP animation", level: 70, icon: "🎭" },
         ],
       },
       {
@@ -41,10 +42,13 @@ export const mockData = {
         skills: [
           { name: "Git/GitHub", level: 90, icon: "🔧" },
           { name: "Webpack", level: 75, icon: "📦" },
+          { name: "Gulp / Vite / Parcel bundlers", level: 75, icon: "📦" },
           { name: "Three.js", level: 70, icon: "🎮" },
-          { name: "Framer Motion", level: 80, icon: "🎬" },
-          { name: "Redux/Zustand", level: 85, icon: "🏪" },
-          { name: "REST API", level: 90, icon: "🌐" },
+          { name: "Wordpress", level: 80, icon: "🎬" },
+          { name: "Elementor", level: 80, icon: "🎬" },
+          { name: "phpMyAdmin", level: 85, icon: "🏪" },
+          { name: "MySQL", level: 90, icon: "🌐" },
+          { name: "BEM", level: 90, icon: "🌐" },
         ],
       },
       {
@@ -52,8 +56,8 @@ export const mockData = {
         skills: [
           { name: "Figma", level: 80, icon: "🎨" },
           { name: "Adobe XD", level: 75, icon: "🎭" },
-          { name: "UI/UX Design", level: 85, icon: "💡" },
           { name: "Responsive Design", level: 95, icon: "📱" },
+          { name: "Pixel Perfect", level: 95, icon: "📱" },
           { name: "Accessibility", level: 80, icon: "♿" },
           { name: "Performance", level: 85, icon: "⚡" },
         ],

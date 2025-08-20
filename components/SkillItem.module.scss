@@ -1,0 +1,86 @@
+.skill_item {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--subbackground-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    // max-width: 30vw;
+    margin-top: 3.5rem;
+    // transition: transform 0.2s ease;
+}
+
+.skill__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--text-highlight);
+
+    .subtitle {
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+    }
+}
+
+.skill__list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+
+    li {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        color: var(--text-color);
+    }
+}
+
+.skillDescription {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.skillLevel {
+    font-size: 0.875rem;
+    color: var(--text-highlight);
+}
+
+.levelLabel {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.levelValue {
+    color: var(--text-color);
+}
+
+.skillTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+
+    .tag {
+        background-color: var(--text-secondary);
+        color: var(--text-color);
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.875rem;
+    }
+}
+
+.progressBar {
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    margin-top: 6px;
+    overflow: hidden;
+}
+
+.progressBarFill {
+    height: 100%;
+    background: #22c55e;
+    width: 0;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
