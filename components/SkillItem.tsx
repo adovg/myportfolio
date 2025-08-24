@@ -42,7 +42,13 @@ const SkillItem = ({ category }: { category: Category }) => {
       <ul className={styles.skill__list}>
         {category.skills.map((skill) => (
           <li className={styles.skill__item} key={skill.name}>
-            <span className={styles.skill__icon}>{skill.icon}</span>
+            <span className={styles.skill__icon}>
+              <img
+                src={skill.icon}
+                alt={skill.name}
+                className={styles.skill__icon}
+              />
+            </span>
             <span>{skill.name}</span>
             <ProgressBar level={skill.level} />
           </li>

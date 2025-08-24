@@ -1,4 +1,8 @@
 // Mock data for portfolio
+{
+  /* <img src "@/public/icons/github.svg" alt "GitHub" /> */
+}
+
 export const mockData = {
   // Hero section data
   hero: {
@@ -28,38 +32,58 @@ export const mockData = {
       {
         title: "Frontend",
         skills: [
-          { name: "React", level: 95, icon: "⚛️" },
-          { name: "Next.js", level: 90, icon: "▲" },
-          { name: "TypeScript", level: 85, icon: "📘" },
-          { name: "JavaScript ES6+", level: 95, icon: "📜" },
-          { name: "HTML5/CSS3", level: 90, icon: "🎨" },
-          { name: "Tailwind CSS", level: 70, icon: "🎭" },
-          { name: "GSAP animation", level: 70, icon: "🎭" },
+          { name: "React", level: 95, icon: "/icons/react.svg" },
+          { name: "Next.js", level: 90, icon: "/icons/nextjs.svg" },
+          { name: "TypeScript", level: 85, icon: "/icons/typescript.svg" },
+          { name: "JavaScript ES6+", level: 95, icon: "/icons/javascript.svg" },
+          { name: "HTML5/CSS3", level: 90, icon: "/icons/html5.svg" },
+          { name: "Tailwind CSS", level: 70, icon: "/icons/tailwind.svg" },
+          { name: "MySQL", level: 90, icon: "/icons/mysql.svg" },
+          { name: "BEM", level: 90, icon: "/icons/bem.svg" },
+          { name: "Wordpress", level: 90, icon: "/icons/wordpress.svg" },
+          { name: "Elementor", level: 80, icon: "/icons/elementor.svg" },
         ],
       },
       {
         title: "Tools & Libraries",
         skills: [
-          { name: "Git/GitHub", level: 90, icon: "🔧" },
-          { name: "Webpack", level: 75, icon: "📦" },
-          { name: "Gulp / Vite / Parcel bundlers", level: 75, icon: "📦" },
-          { name: "Three.js", level: 70, icon: "🎮" },
-          { name: "Wordpress", level: 80, icon: "🎬" },
-          { name: "Elementor", level: 80, icon: "🎬" },
-          { name: "phpMyAdmin", level: 85, icon: "🏪" },
-          { name: "MySQL", level: 90, icon: "🌐" },
-          { name: "BEM", level: 90, icon: "🌐" },
+          { name: "Git/GitHub", level: 90, icon: "/icons/github.svg" },
+          { name: "Webpack", level: 65, icon: "/icons/webpack.svg" },
+          {
+            name: "Gulp / Vite / Parcel bundlers",
+            level: 80,
+            icon: "/icons/vitejs.svg",
+          },
+          { name: "Three.js", level: 70, icon: "/icons/threejs.svg" },
+          { name: "Docker", level: 60, icon: "/icons/docker.svg" },
+          { name: "GSAP animation", level: 70, icon: "/icons/gsap.svg" },
+
+          { name: "phpMyAdmin", level: 60, icon: "/icons/myadmin.svg" },
+          { name: "Linux", level: 85, icon: "/icons/linux.svg" },
+          {
+            name: "Visual Studio Code",
+            level: 80,
+            icon: "/icons/vs.svg",
+          },
         ],
       },
       {
         title: "Design & UX",
         skills: [
-          { name: "Figma", level: 80, icon: "🎨" },
-          { name: "Adobe XD", level: 75, icon: "🎭" },
-          { name: "Responsive Design", level: 95, icon: "📱" },
-          { name: "Pixel Perfect", level: 95, icon: "📱" },
-          { name: "Accessibility", level: 80, icon: "♿" },
-          { name: "Performance", level: 85, icon: "⚡" },
+          { name: "Figma", level: 80, icon: "/icons/figma.svg" },
+          { name: "Adobe Photoshop", level: 75, icon: "/icons/adobe.svg" },
+          {
+            name: "Responsive Design",
+            level: 95,
+            icon: "/icons/cross-platform-icon.svg",
+          },
+          { name: "Pixel Perfect", level: 95, icon: "/icons/monitor.svg" },
+          {
+            name: "Accessibility",
+            level: 80,
+            icon: "/icons/accses.svg",
+          },
+          { name: "Performance", level: 85, icon: "/icons/perfomance.svg" },
         ],
       },
     ],
