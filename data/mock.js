@@ -75,7 +75,7 @@ export const mockData = {
           {
             name: "Responsive Design",
             level: 95,
-            icon: "/icons/cross-platform-icon.svg",
+            icon: "/icons/devices-1.svg",
           },
           { name: "Pixel Perfect", level: 95, icon: "/icons/monitor.svg" },
           {
@@ -203,8 +203,8 @@ export const mockData = {
     title: "Свяжитесь со мной",
     subtitle: "Готов обсудить ваш проект",
     email: "alex.petrov@example.com",
-    phone: "+7 (999) 123-45-67",
-    location: "Москва, Россия",
+    phone: "+1234567890",
+    location: "",
     social: [
       { name: "GitHub", url: "https://github.com/alexdev", icon: "github" },
       {

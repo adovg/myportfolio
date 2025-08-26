@@ -25,7 +25,7 @@ const Navbar = () => {
           href="/works"
           className={pathname === "/works" ? styles.active : ""}
         >
-          Some my works
+          Works
         </Link>
       </nav>
       <div className={styles.nav__toggles}>
