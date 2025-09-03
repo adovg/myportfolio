@@ -125,9 +125,22 @@
     padding: 2rem;
     border-radius: 12px;
     max-width: 50vw;
-    width: 100%;
+    width: 80%;
     position: relative;
     overflow: hidden;
+
+    .modal__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .modal__description {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        text-align: left;
+
+    }
 
     img {
         width: 100%;
@@ -147,4 +160,18 @@
         border: none;
         cursor: pointer;
     }
+
+    .overlay__icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .modal__links {
+        display: flex;
+        gap: 15px;
+        margin-top: 10px;
+        justify-content: center;
+    }
 }
+
+/* Modal */
