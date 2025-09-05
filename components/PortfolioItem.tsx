@@ -84,6 +84,22 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ projects, title }) => {
     }
   };
 
+  // Функция блокировки скролла
+  const lockScroll = () => {
+    if (typeof document !== "undefined") {
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    }
+  };
+
+  // Функция разблокировки скролла
+  const unlockScroll = () => {
+    if (typeof document !== "undefined") {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    }
+  };
+
   // Обработчик клавиши Escape
   React.useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -94,6 +110,19 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ projects, title }) => {
 
     window.addEventListener("keydown", handleEscape);
     return () => window.removeEventListener("keydown", handleEscape);
+  }, [selected]);
+
+  // Блокировка скролла при открытии модального окна
+  React.useEffect(() => {
+    if (selected) {
+      lockScroll();
+    } else {
+      unlockScroll();
+    }
+
+    return () => {
+      unlockScroll();
+    };
   }, [selected]);
 
   // Запуск анимации при открытии модального окна
