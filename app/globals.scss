@@ -28,6 +28,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-size: 16px;
 }
 
 body {
@@ -73,4 +74,35 @@ main {
 
 footer {
   height: 40px;
+}
+
+/* Кастомный скроллбар */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-highlight);
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-color);
+}
+
+/* Плавная прокрутка */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Улучшение фокуса для доступности */
+*:focus-visible {
+  outline: 2px solid var(--text-highlight);
+  outline-offset: 2px;
 }

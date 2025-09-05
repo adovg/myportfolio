@@ -1,10 +1,9 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./SkillItem.module.scss";
-import { Code, Palette, Settings } from "lucide-react";
 import { mockData } from "@/data/mock.js";
 import gsap from "gsap";
-const { skills } = mockData;
+// const { skills } = mockData;
 
 const ProgressBar = ({ level, color }: { level: number; color: string }) => {
   const [width, setWidth] = useState(0);
@@ -13,13 +12,16 @@ const ProgressBar = ({ level, color }: { level: number; color: string }) => {
   useEffect(() => {
     if (!mounted.current) {
       mounted.current = true;
-      setTimeout(() => setWidth(level), 200); // небольшая задержка для плавности
+      setTimeout(() => setWidth(level), 200);
     }
   }, [level]);
 
   return (
     <div className={styles.progressBar}>
-      <div className={styles.progressBarFill} style={{ width: `${width}%`, backgroundColor: color  }}  />
+      <div
+        className={styles.progressBarFill}
+        style={{ width: `${width}%`, backgroundColor: color }}
+      />
     </div>
   );
 };
@@ -87,7 +89,7 @@ const SkillItem = ({ category }: { category: Category }) => {
               />
             </span>
             <span>{skill.name}</span>
-            <ProgressBar level={skill.level} color={skill.color}/>
+            <ProgressBar level={skill.level} color={skill.color} />
           </li>
         ))}
       </ul>

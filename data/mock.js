@@ -1,14 +1,25 @@
 // Mock data for portfolio
 
-
-  const generateRandomColor = () => {
-    const colors = [
-      '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7',
-      '#DDA0DD', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9',
-      '#F8C471', '#82E0AA', '#F1948A', '#85C1E9', '#D7BDE2'
-    ];
-    return colors[Math.floor(Math.random() * colors.length)];
-  };
+const generateRandomColor = () => {
+  const colors = [
+    "#FF6B6B",
+    "#4ECDC4",
+    "#45B7D1",
+    "#96CEB4",
+    "#FFEAA7",
+    "#DDA0DD",
+    "#98D8C8",
+    "#F7DC6F",
+    "#BB8FCE",
+    "#85C1E9",
+    "#F8C471",
+    "#82E0AA",
+    "#F1948A",
+    "#85C1E9",
+    "#D7BDE2",
+  ];
+  return colors[Math.floor(Math.random() * colors.length)];
+};
 
 export const mockData = {
   // Hero section data
@@ -39,58 +50,167 @@ export const mockData = {
       {
         title: "Frontend",
         skills: [
-          { name: "React", level: 95, icon: "/icons/react.svg", color:generateRandomColor() },
-          { name: "Next.js", level: 90, icon: "/icons/nextjs.svg", color:generateRandomColor()  },
-          { name: "TypeScript", level: 85, icon: "/icons/typescript.svg", color:generateRandomColor()  },
-          { name: "JavaScript ES6+", level: 95, icon: "/icons/javascript.svg", color:generateRandomColor()  },
-          { name: "HTML5/CSS3", level: 90, icon: "/icons/html5.svg", color:generateRandomColor()  },
-          { name: "Tailwind CSS", level: 70, icon: "/icons/tailwind.svg", color:generateRandomColor()  },
-          { name: "MySQL", level: 90, icon: "/icons/mysql.svg", color:generateRandomColor()  },
-          { name: "BEM", level: 90, icon: "/icons/bem.svg", color:generateRandomColor()  },
-          { name: "Wordpress", level: 90, icon: "/icons/wordpress.svg", color:generateRandomColor()  },
-          { name: "Elementor", level: 80, icon: "/icons/elementor.svg", color:generateRandomColor()  },
+          {
+            name: "React",
+            level: 95,
+            icon: "/icons/react.svg",
+            color: "#0cd1fe",
+          },
+          {
+            name: "Next.js",
+            level: 90,
+            icon: "/icons/nextjs.svg",
+            color: "#000000",
+          },
+          {
+            name: "TypeScript",
+            level: 85,
+            icon: "/icons/typescript.svg",
+            color: "#0279cc",
+          },
+          {
+            name: "JavaScript ES6+",
+            level: 95,
+            icon: "/icons/javascript.svg",
+            color: "#f7df1d",
+          },
+          {
+            name: "HTML5/CSS3",
+            level: 90,
+            icon: "/icons/html5.svg",
+            color: "#f06527",
+          },
+          {
+            name: "Tailwind CSS",
+            level: 70,
+            icon: "/icons/tailwind.svg",
+            color: "#35bef1",
+          },
+          {
+            name: "MySQL",
+            level: 90,
+            icon: "/icons/mysql.svg",
+            color: "#41606e",
+          },
+          {
+            name: "BEM",
+            level: 90,
+            icon: "/icons/bem.svg",
+            color: "#000200",
+          },
+          {
+            name: "Wordpress",
+            level: 90,
+            icon: "/icons/wordpress.svg",
+            color: "#047593",
+          },
+          {
+            name: "Elementor",
+            level: 80,
+            icon: "/icons/elementor.svg",
+            color: "#6e2d6d",
+          },
         ],
       },
       {
         title: "Tools & Libraries",
         skills: [
-          { name: "Git/GitHub", level: 90, icon: "/icons/github.svg" },
-          { name: "Webpack", level: 65, icon: "/icons/webpack.svg" },
           {
-            name: "Gulp / Vite / Parcel bundlers",
+            name: "Git/GitHub",
+            level: 90,
+            icon: "/icons/github.svg",
+            color: "#000000",
+          },
+          {
+            name: "Webpack",
+            level: 65,
+            icon: "/icons/webpack.svg",
+            color: "#94d1f4",
+          },
+          {
+            name: "Vite/ Parcel/ Gulp",
             level: 80,
             icon: "/icons/vitejs.svg",
+            color: "#b739f5",
           },
-          { name: "Three.js", level: 70, icon: "/icons/threejs.svg" },
-          { name: "Docker", level: 60, icon: "/icons/docker.svg" },
-          { name: "GSAP animation", level: 70, icon: "/icons/gsap.svg" },
+          {
+            name: "Three.js",
+            level: 70,
+            icon: "/icons/threejs.svg",
+            color: "#24ae61",
+          },
+          {
+            name: "Docker",
+            level: 60,
+            icon: "/icons/docker.svg",
+            color: "#0794bc",
+          },
+          {
+            name: "GSAP animation",
+            level: 70,
+            icon: "/icons/gsap.svg",
+            color: "#8bb754",
+          },
 
-          { name: "phpMyAdmin", level: 60, icon: "/icons/myadmin.svg" },
-          { name: "Linux", level: 85, icon: "/icons/linux.svg" },
+          {
+            name: "phpMyAdmin",
+            level: 60,
+            icon: "/icons/myadmin.svg",
+            color: "#e2b15e",
+          },
+          {
+            name: "Linux",
+            level: 85,
+            icon: "/icons/linux.svg",
+            color: "#ffd030",
+          },
           {
             name: "Visual Studio Code",
             level: 80,
             icon: "/icons/vs.svg",
+            color: "#007fd9",
           },
         ],
       },
       {
         title: "Design & UX",
         skills: [
-          { name: "Figma", level: 80, icon: "/icons/figma.svg" },
-          { name: "Adobe Photoshop", level: 75, icon: "/icons/adobe.svg" },
+          {
+            name: "Figma",
+            level: 80,
+            icon: "/icons/figma.svg",
+            color: generateRandomColor(),
+          },
+          {
+            name: "Adobe Photoshop",
+            level: 75,
+            icon: "/icons/adobe.svg",
+            color: generateRandomColor(),
+          },
           {
             name: "Responsive Design",
             level: 95,
             icon: "/icons/devices-1.svg",
+            color: generateRandomColor(),
           },
-          { name: "Pixel Perfect", level: 95, icon: "/icons/monitor.svg" },
+          {
+            name: "Pixel Perfect",
+            level: 95,
+            icon: "/icons/monitor.svg",
+            color: generateRandomColor(),
+          },
           {
             name: "Accessibility",
             level: 80,
             icon: "/icons/accses.svg",
+            color: generateRandomColor(),
           },
-          { name: "Performance", level: 85, icon: "/icons/perfomance.svg" },
+          {
+            name: "Performance",
+            level: 85,
+            icon: "/icons/perfomance.svg",
+            color: generateRandomColor(),
+          },
         ],
       },
     ],
