@@ -64,7 +64,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ projects, title }) => {
       gsap.fromTo(
         modalRef.current,
         { opacity: 0, scale: 0.8 },
-        { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(1.7)" }
+        { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.3)" }
       );
     }
   };

@@ -1,4 +1,5 @@
 .hero {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,12 +7,21 @@
     text-align: center;
     gap: 20px;
     min-height: 80vh;
-    // max-width: 80rem;
-    // text-align: center;
+    overflow: hidden;
 
     span {
         display: block;
     }
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    // background: rgba(0, 0, 0, 0.3);
+    // backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .hero h1 {
@@ -45,6 +55,7 @@
     font-weight: 500;
 
     span {
-        margin-bottom: 2rem;
+        margin: 2rem 0;
+        // margin-bottom: 2rem;
     }
 }

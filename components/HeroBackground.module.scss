@@ -1,0 +1,32 @@
+.matrixBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: var(--background-color);
+    overflow: hidden;
+
+    // Стилизация canvas элемента, созданного Three.js
+    canvas {
+        display: block;
+        outline: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+// Адаптивность для разных размеров экрана
+@media (max-width: 768px) {
+    .matrixBackground {
+        // Можно добавить дополнительные стили для планшетов
+    }
+}
+
+@media (max-width: 480px) {
+    .matrixBackground {
+        // Стили для мобильных устройств
+    }
+}
