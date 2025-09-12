@@ -1,32 +1,73 @@
-.matrixBackground {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
+.icons-container {
     background: var(--background-color);
-    overflow: hidden;
+}
 
-    // Стилизация canvas элемента, созданного Three.js
-    canvas {
-        display: block;
-        outline: none;
-        position: absolute;
-        top: 0;
-        left: 0;
+.tech-icon-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0;
+    filter: drop-shadow(0 0 8px currentColor);
+}
+
+@keyframes floatIcon {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: translate(30px, -20px) rotate(10deg) scale(1.1);
+    }
+
+    50% {
+        transform: translate(-20px, -30px) rotate(-10deg) scale(0.9);
+    }
+
+    75% {
+        transform: translate(-30px, 20px) rotate(5deg) scale(1.05);
+    }
+
+    100% {
+        transform: translate(20px, 30px) rotate(-5deg) scale(1);
     }
 }
 
-// Адаптивность для разных размеров экрана
-@media (max-width: 768px) {
-    .matrixBackground {
-        // Можно добавить дополнительные стили для планшетов
+@keyframes glowIcon {
+
+    0%,
+    100% {
+        opacity: 0;
+        filter: drop-shadow(0 0 4px currentColor);
+    }
+
+    25%,
+    75% {
+        opacity: 0.6;
+        filter: drop-shadow(0 0 12px currentColor);
+    }
+
+    50% {
+        opacity: 0.8;
+        filter: drop-shadow(0 0 16px currentColor);
     }
 }
 
-@media (max-width: 480px) {
-    .matrixBackground {
-        // Стили для мобильных устройств
-    }
+// Вариации для разных иконок
+.tech-icon-wrapper:nth-child(odd) {
+    animation-duration: 20s !important;
+}
+
+.tech-icon-wrapper:nth-child(even) {
+    animation-duration: 25s !important;
+}
+
+.tech-icon-wrapper:nth-child(3n) {
+    animation-duration: 30s !important;
+}
+
+.tech-icon-wrapper:nth-child(5n) {
+    animation-duration: 15s !important;
 }

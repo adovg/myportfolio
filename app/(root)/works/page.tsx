@@ -3,16 +3,6 @@ import styles from "./page.module.scss";
 import { mockData } from "@/data/mock.js";
 import PortfolioItem from "@/components/PortfolioItem";
 
-// const page = () => {
-//   return (
-//     <div>
-//       {mockData.portfolio.map((item) => (
-//         <PortfolioItem key={item.title} item={item} />
-//       ))}
-//     </div>
-//   );
-// };
-
 const page = () => {
   return (
     <div>
