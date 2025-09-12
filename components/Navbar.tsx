@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.scss";
 import "../app/globals.scss"; // Import global styles if needed
 import { ThemeToggle } from "./ThemeToggle"; // Import the ThemeToggle component
-import { LanguageSwitcher } from "./LanguageSwitcher";
+// import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -36,7 +36,7 @@ const Navbar = () => {
       </nav>
       <div className={styles.nav__toggles}>
         <ThemeToggle />
-        <LanguageSwitcher />
+        {/* <LanguageSwitcher /> */}
       </div>
     </div>
   );

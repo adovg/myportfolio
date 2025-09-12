@@ -327,20 +327,20 @@ export const mockData = {
 
   // Contact information
   contact: {
-    title: "Свяжитесь со мной",
-    subtitle: "Готов обсудить ваш проект",
-    email: "alex.petrov@example.com",
+    title: "Contact Me",
+    subtitle: "send me a message",
+    email: "oleksidovgalenko@gmail.com",
     phone: "+1234567890",
     location: "",
     social: [
-      { name: "GitHub", url: "https://github.com/alexdev", icon: "github" },
+      { name: "GitHub", url: "https://github.com/adovg", icon: "github" },
       {
         name: "LinkedIn",
-        url: "https://linkedin.com/in/alexdev",
+        url: "https://www.linkedin.com/in/oleksii-dovgalenko-36b10416b/",
         icon: "linkedin",
       },
-      { name: "Telegram", url: "https://t.me/alexdev", icon: "message-circle" },
-      { name: "Twitter", url: "https://twitter.com/alexdev", icon: "twitter" },
+      { name: "Telegram", url: "https://t.me/", icon: "message-circle" },
+      { name: "Twitter", url: "https://twitter.com/", icon: "twitter" },
     ],
   },
 
