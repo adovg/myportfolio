@@ -4,13 +4,11 @@ import { useContext } from "react";
 import { LanguageContext } from "@/context/LocaleContext";
 import { translations } from "@/lib/translations";
 import styles from "./Hero.module.scss";
-import HeroBackground from "./HeroBackground";
 
 const Hero = () => {
   const { lang } = useContext(LanguageContext)!;
   return (
     <section className={styles.hero}>
-      {/* <HeroBackground /> */}
       <div className={styles.heroContent}>
         <h1>
           <span>Hello, I am </span>
