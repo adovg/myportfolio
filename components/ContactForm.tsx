@@ -1,5 +1,5 @@
 "use client";
-import React, { use, useState } from "react";
+import React, { useState } from "react";
 import styles from "./ContactForm.module.scss";
 
 interface FormData {
@@ -85,23 +85,25 @@ const ContactForm = () => {
     setSubmitError("");
 
     try {
-      // Simulate API call - replace with actual API endpoint
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-      // Here you would make actual API call:
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData),
-      // });
+      const result = await response.json();
 
-      // if (!response.ok) throw new Error('Failed to send message');
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to send message");
+      }
 
       setIsSubmitted(true);
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
       setSubmitError(
-        "Произошла ошибка при отправке сообщения. Попробуйте еще раз."
+        error instanceof Error
+          ? error.message
+          : "Произошла ошибка при отправке сообщения. Попробуйте еще раз."
       );
     } finally {
       setIsSubmitting(false);
