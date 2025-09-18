@@ -65,10 +65,13 @@
 }
 
 .contactForm__button {
+    display: flex;
+    max-width: 40vw;
+    margin: 0 auto;
     padding: 0.875rem 2rem;
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
+    background-color: var(--button-background);
+    color: var(--text-color);
+    border: 1px solid var(--text-highlight);
     border-radius: 6px;
     font-size: 1rem;
     font-weight: 600;
@@ -76,7 +79,7 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
 
     &:hover:not(:disabled) {
-        background-color: var(--accent-hover);
+        background-color: var(--text-highlight);
         transform: translateY(-1px);
     }
 

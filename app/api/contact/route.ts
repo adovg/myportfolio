@@ -23,12 +23,30 @@ export async function POST(request: NextRequest) {
     }
 
     // Создаем транспортер для отправки email
-    // ЗАМЕНИТЕ эти настройки на ваши реальные данные SMTP
+    // ДЕБАГ: Проверяем наличие переменных окружения
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASSWORD) {
+      console.error("Отсутствуют переменные окружения:");
+      console.error("EMAIL_USER:", process.env.EMAIL_USER);
+      console.error(
+        "EMAIL_PASSWORD:",
+        process.env.EMAIL_PASSWORD ? "установлен" : "отсутствует"
+      );
+      return NextResponse.json(
+        { error: "Ошибка конфигурации сервера" },
+        { status: 500 }
+      );
+    }
+
+    console.log("Настройки email (только для разработки):");
+    console.log("Service: gmail");
+    console.log("User:", process.env.EMAIL_USER);
+    console.log("Password length:", process.env.EMAIL_PASSWORD?.length);
+
     const transporter = nodemailer.createTransport({
-      service: "gmail", // или другой email сервис
+      service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER, // ваш email
-        pass: process.env.EMAIL_PASSWORD, // ваш пароль приложения
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASSWORD,
       },
     });
 
@@ -65,8 +83,30 @@ export async function POST(request: NextRequest) {
     );
   } catch (error) {
     console.error("Ошибка отправки email:", error);
+
+    // Детальная информация об ошибке для дебаггинга
+    let errorMessage = "Произошла ошибка при отправке сообщения";
+    let errorDetails = "";
+
+    if (error instanceof Error) {
+      errorDetails = error.message;
+
+      // Специфичные ошибки Nodemailer
+      if (errorDetails.includes("Invalid login")) {
+        errorMessage = "Ошибка аутентификации email. Проверьте логин и пароль.";
+      } else if (errorDetails.includes("Connection timeout")) {
+        errorMessage = "Таймаут подключения к email серверу.";
+      } else if (errorDetails.includes("Authentication failed")) {
+        errorMessage = "Ошибка аутентификации. Проверьте настройки email.";
+      }
+    }
+
     return NextResponse.json(
-      { error: "Произошла ошибка при отправке сообщения" },
+      {
+        error: errorMessage,
+        details:
+          process.env.NODE_ENV === "development" ? errorDetails : undefined,
+      },
       { status: 500 }
     );
   }

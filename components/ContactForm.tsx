@@ -113,15 +113,15 @@ const ContactForm = () => {
   if (isSubmitted) {
     return (
       <div className={styles.contactForm}>
-        <h2 className={styles.contactForm__title}>Сообщение отправлено!</h2>
+        <h2 className={styles.contactForm__title}>Message sent!</h2>
         <div className={styles.contactForm__success}>
-          <p>Спасибо за ваше сообщение! Я свяжусь с вами в ближайшее время.</p>
+          <p>Thank you for your message! I will contact you shortly.</p>
         </div>
         <button
           className={styles.contactForm__button}
           onClick={() => setIsSubmitted(false)}
         >
-          Отправить новое сообщение
+          Send new message
         </button>
       </div>
     );
@@ -129,7 +129,7 @@ const ContactForm = () => {
 
   return (
     <div className={styles.contactForm}>
-      <h2 className={styles.contactForm__title}>Напишите мне</h2>
+      <h2 className={styles.contactForm__title}>Contact me</h2>
 
       {submitError && (
         <div className={styles.contactForm__error}>
@@ -140,7 +140,7 @@ const ContactForm = () => {
       <form className={styles.contactForm__form} onSubmit={handleSubmit}>
         <div className={styles.contactForm__field}>
           <label htmlFor="name" className={styles.contactForm__label}>
-            Имя *
+            Name *
           </label>
           <input
             type="text"
@@ -149,7 +149,7 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleInputChange}
             className={styles.contactForm__input}
-            placeholder="Ваше имя"
+            placeholder="Your Name"
             disabled={isSubmitting}
           />
           {errors.name && (
@@ -182,7 +182,7 @@ const ContactForm = () => {
 
         <div className={styles.contactForm__field}>
           <label htmlFor="subject" className={styles.contactForm__label}>
-            Тема *
+            Subject *
           </label>
           <input
             type="text"
@@ -191,7 +191,7 @@ const ContactForm = () => {
             value={formData.subject}
             onChange={handleInputChange}
             className={styles.contactForm__input}
-            placeholder="Тема сообщения"
+            placeholder="Whtat's this about?"
             disabled={isSubmitting}
           />
           {errors.subject && (
@@ -203,7 +203,7 @@ const ContactForm = () => {
 
         <div className={styles.contactForm__field}>
           <label htmlFor="message" className={styles.contactForm__label}>
-            Сообщение *
+            Message *
           </label>
           <textarea
             id="message"
@@ -211,7 +211,7 @@ const ContactForm = () => {
             value={formData.message}
             onChange={handleInputChange}
             className={styles.contactForm__textarea}
-            placeholder="Расскажите о вашем проекте или задайте вопрос..."
+            placeholder="Tell me about your project or ask a question..."
             disabled={isSubmitting}
           />
           {errors.message && (
@@ -226,7 +226,7 @@ const ContactForm = () => {
           className={styles.contactForm__button}
           disabled={isSubmitting}
         >
-          {isSubmitting ? "Отправка..." : "Отправить сообщение"}
+          {isSubmitting ? "Sending..." : "Send message"}
         </button>
       </form>
     </div>

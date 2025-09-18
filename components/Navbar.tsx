@@ -9,6 +9,7 @@ import { ThemeToggle } from "./ThemeToggle"; // Import the ThemeToggle component
 
 const Navbar = () => {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   return (
     <div className={styles.navbar__wrapper}>
       <nav className={styles.nav}>
