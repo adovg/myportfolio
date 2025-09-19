@@ -28,7 +28,7 @@ const ProgressBar = ({ level, color }: { level: number; color: string }) => {
 
 type Skill = {
   name: string;
-  icon: React.ReactNode;
+  icon: string;
   level: number;
   color: string;
 };
@@ -77,18 +77,24 @@ const SkillItem = ({ category }: { category: Category }) => {
           <li
             className={styles.skill__item}
             key={skill.name}
-            ref={(el) => (skillRefs.current[idx] = el)}
+            ref={(el: HTMLLIElement | null) => {
+              if (el) {
+                skillRefs.current[idx] = el;
+              }
+            }}
             onMouseEnter={() => handleMouseEnter(idx)}
             onMouseLeave={() => handleMouseLeave(idx)}
           >
-            <span className={styles.skill__icon}>
-              <img
-                src={skill.icon}
-                alt={skill.name}
-                className={styles.skill__icon}
-              />
-            </span>
-            <span>{skill.name}</span>
+            <div className={styles.skill__item_header}>
+              <span className={styles.skill__icon}>
+                <img
+                  src={skill.icon}
+                  alt={skill.name}
+                  className={styles.skill__icon}
+                />
+              </span>
+              <span className={styles.skill__item_name}>{skill.name}</span>
+            </div>
             <ProgressBar level={skill.level} color={skill.color} />
           </li>
         ))}
