@@ -236,7 +236,7 @@ export const mockData = {
         image: "/images/slide-2.png",
         demoUrl: "https://adovg.github.io/spa-crypto-labs/",
         githubUrl: "https://github.com/adovg/spa-crypto-labs",
-        category: "Web-application",
+        category: "Landing",
         featured: true,
       },
       {
@@ -249,9 +249,9 @@ export const mockData = {
         technologies: ["HTML", "SCSS", "JavaScript", "Vite"],
         image:
           "/images/slide-3.png",
-        demoUrl: "https://demo-weather.example.com",
-        githubUrl: "https://github.com/example/weather-dashboard",
-        category: "Веб-приложение",
+        demoUrl: "https://adovg.github.io/estate-spa/",
+        githubUrl: "https://github.com/adovg/estate-spa",
+        category: "Landing",
         featured: false,
       },
       {
@@ -264,8 +264,8 @@ export const mockData = {
         technologies: ["HTML", "SCSS", "JavaScript", "Vite"],
         image:
           "/images/slide-4.png",
-        demoUrl: "https://demo-portfolio.example.com",
-        githubUrl: "https://github.com/example/portfolio",
+        demoUrl: "https://adovg.github.io/landing-upwork/",
+        githubUrl: "https://github.com/adovg/landing-upwork",
         category: "Landing",
         featured: false,
       },
@@ -279,8 +279,8 @@ export const mockData = {
         technologies: ["HTML", "SCSS", "JavaScript", "Vite"],
         image:
           "/images/slide-5.png",
-        demoUrl: "https://demo-realestate.example.com",
-        githubUrl: "https://github.com/example/real-estate",
+        demoUrl: "https://adovg.github.io/landing-upwork-2/",
+        githubUrl: "https://github.com/adovg/landing-upwork-2",
         category: "Landing",
         featured: true,
       },
@@ -292,12 +292,12 @@ export const mockData = {
           "The application was created for those who wish to post their startup ideas.",
         longDescription:
           "The app allows users to register, search for relevant articles, and publish their own posts. View statistics are also available..",
-        technologies: ["NextJs", "Sanity", "JavaScript", "Vite", "Tailwind", "Sentry"],
+        technologies: ["NextJs", "Sanity", "JavaScript", "Tailwind", "Sentry"],
         image:
           "/images/slide-6.png",
-        demoUrl: "https://demo-realestate.example.com",
-        githubUrl: "https://github.com/example/real-estate",
-        category: "Landing",
+        demoUrl: "https://next-js-startup-three.vercel.app/",
+        githubUrl: "https://github.com/adovg/nextJS-startup",
+        category: "Web-application",
         featured: true,
       },
 
