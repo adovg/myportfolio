@@ -11,6 +11,7 @@ html.light {
   --text-color: #121924;
   --text-secondary: #6c757d;
   --text-highlight: #007bff;
+  --button-background: #ddebfe;
   --subbackground-color: #f2f4f8;
 }
 
@@ -19,6 +20,7 @@ html.dark {
   --text-color: #ededed;
   --text-secondary: #aaaaaa;
   --text-highlight: #66b2ff;
+  --button-background: #ddebfe;
   --subbackground-color: #202938;
 }
 
@@ -43,18 +45,12 @@ body {
 }
 
 .container {
-  // max-width: 1200px;
   margin: 0 auto;
   padding: 10px 40px;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-
-// .wrapper {
-//   padding: 10px 40px;
-// }
-
 
 a {
   color: var(--text-color);

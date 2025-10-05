@@ -24,28 +24,20 @@ const generateRandomColor = () => {
 export const mockData = {
   // Hero section data
   hero: {
-    name: "Алексей",
+    name: "",
     title: "Frontend Developer",
     subtitle:
-      "Создаю современные веб-приложения с фокусом на пользовательский опыт",
+      "I create modern web applications with a focus on user experience",
     description:
-      "Специализируюсь на React, Next.js, TypeScript и современных веб-технологиях",
-    email: "test@example.com",
+      "I specialize in React, Next.js, TypeScript, and modern web technologies",
+    email: "",
     location: "Earth",
   },
 
-  // Navigation menu
-  navigation: [
-    { id: "hero", label: "Главная", href: "#hero" },
-    { id: "skills", label: "Навыки", href: "#skills" },
-    { id: "portfolio", label: "Работы", href: "#portfolio" },
-    { id: "contact", label: "Контакты", href: "#contact" },
-  ],
-
   // Skills data
   skills: {
-    title: "Навыки и технологии",
-    subtitle: "Технологии, с которыми я работаю",
+    title: "",
+    subtitle: "",
     categories: [
       {
         title: "Frontend",
@@ -218,49 +210,45 @@ export const mockData = {
 
   // Portfolio projects
   portfolio: {
-    title: "Мои работы",
-    subtitle: "Избранные проекты, над которыми я работал",
+    title: "My Projects",
+    subtitle: "A selection of my recent work",
     projects: [
       {
         id: 1,
-        title: "E-commerce Platform",
-        description:
-          "Современная платформа электронной коммерции с React и Next.js",
+        title: "Web app with animation for restaurant",
+        description: "Modern e-commerce platform with React and animation",
         longDescription:
-          "Полнофункциональная платформа электронной коммерции с корзиной покупок, системой платежей, админ-панелью и мобильной адаптацией.",
-        technologies: ["React", "Next.js", "TypeScript", "Stripe", "MongoDB"],
-        image:
-          "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-        demoUrl: "https://demo-ecommerce.example.com",
-        githubUrl: "https://github.com/example/ecommerce",
-        category: "Веб-приложение",
+          "A modern e-commerce platform for restaurants built with React. Dynamic animation guides customers from menu browsing to ordering, increasing conversion.",
+        technologies: ["React", "GSAP", "TypeScript", "Tailwind", "Vite"],
+        image: "/images/slide-1.png",
+        demoUrl: "https://gsap-react-animation.vercel.app/",
+        githubUrl: "https://github.com/adovg/gsap-react-animation",
+        category: "Web-application",
         featured: true,
       },
       {
         id: 2,
-        title: "Task Management App",
-        description:
-          "Приложение для управления задачами с drag-and-drop функциональностью",
+        title: "Landing page for a cryptocurrency startup",
+        description: "",
         longDescription:
-          "Интуитивное приложение для управления проектами и задачами с возможностью совместной работы в команде.",
-        technologies: ["React", "Redux", "Node.js", "Socket.io", "PostgreSQL"],
-        image:
-          "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
-        demoUrl: "https://demo-tasks.example.com",
-        githubUrl: "https://github.com/example/task-manager",
-        category: "Веб-приложение",
+          "A sleek and modern landing page showcasing a cutting-edge crypto project, designed to attract investors and enthusiasts. Features include bold visuals, clear tokenomics, and seamless navigation for an engaging user experience.",
+        technologies: ["HTML", "SCSS", "JavaScript", "Vite"],
+        image: "/images/slide-2.png",
+        demoUrl: "https://adovg.github.io/spa-crypto-labs/",
+        githubUrl: "https://github.com/adovg/spa-crypto-labs",
+        category: "Web-application",
         featured: true,
       },
       {
         id: 3,
-        title: "Weather Dashboard",
+        title: "Landing page for a real estate rental and sale project",
         description:
-          "Интерактивная панель управления погодой с 3D визуализацией",
+          "The design emphasizes trust and clarity, using high-quality imagery and concise messaging to guide users effortlessly. Integrated contact forms and call-to-action buttons encourage conversions, making it ideal for showcasing property portfolios and driving client engagement.",
         longDescription:
-          "Современный weather dashboard с красивыми анимациями, прогнозом на неделю и интерактивными 3D элементами.",
-        technologies: ["React", "Three.js", "OpenWeather API", "Framer Motion"],
+          "A clean and professional landing page for a real estate platform offering property rentals and sales. ",
+        technologies: ["HTML", "SCSS", "JavaScript", "Vite"],
         image:
-          "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop",
+          "/images/slide-3.png",
         demoUrl: "https://demo-weather.example.com",
         githubUrl: "https://github.com/example/weather-dashboard",
         category: "Веб-приложение",
@@ -268,60 +256,51 @@ export const mockData = {
       },
       {
         id: 4,
-        title: "Portfolio Website",
+        title: "Landing page for a poker training platform",
         description:
-          "Адаптивный сайт-портфолио с анимациями и современным дизайном",
+          "A bold and immersive full responsive landing page for a poker training platform, tailored to serious players seeking mastery.",
         longDescription:
-          "Полностью responsive портфолио с плавными анимациями, темной/светлой темой и оптимизацией производительности.",
-        technologies: ["React", "Tailwind CSS", "Framer Motion", "Netlify"],
+          "Call-to-action elements and persuasive copy make it ideal for converting visitors into subscribers. The design balances entertainment and professionalism, appealing to both casual enthusiasts and competitive players",
+        technologies: ["HTML", "SCSS", "JavaScript", "Vite"],
         image:
-          "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
+          "/images/slide-4.png",
         demoUrl: "https://demo-portfolio.example.com",
         githubUrl: "https://github.com/example/portfolio",
-        category: "Лендинг",
+        category: "Landing",
         featured: false,
       },
       {
         id: 5,
-        title: "Real Estate Platform",
+        title: "Landing page for payment platform",
         description:
-          "Платформа для поиска и аренды недвижимости с интерактивными картами",
+          "A minimalist landing page for PaymentOS, a decentralized payment solution tailored for DAOs. The design emphasizes clarity, trust, and modern aesthetics to attract crypto-native communities.",
         longDescription:
-          "Комплексная платформа недвижимости с поиском, фильтрацией, интерактивными картами и системой бронирования.",
-        technologies: [
-          "Next.js",
-          "TypeScript",
-          "Mapbox",
-          "Prisma",
-          "PostgreSQL",
-        ],
+          "This site introduces a blockchain-based payment infrastructure with clean visuals.",
+        technologies: ["HTML", "SCSS", "JavaScript", "Vite"],
         image:
-          "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
+          "/images/slide-5.png",
         demoUrl: "https://demo-realestate.example.com",
         githubUrl: "https://github.com/example/real-estate",
-        category: "Веб-приложение",
+        category: "Landing",
         featured: true,
       },
+
       {
-        id: 6,
-        title: "Crypto Trading Dashboard",
-        description: "Реального времени панель для торговли криптовалютами",
+        id: 5,
+        title: "Web app for startups",
+        description:
+          "The application was created for those who wish to post their startup ideas.",
         longDescription:
-          "Продвинутая торговая панель с real-time данными, графиками, техническими индикаторами и системой уведомлений.",
-        technologies: [
-          "React",
-          "Chart.js",
-          "WebSocket",
-          "Redux Toolkit",
-          "TailwindCSS",
-        ],
+          "The app allows users to register, search for relevant articles, and publish their own posts. View statistics are also available..",
+        technologies: ["NextJs", "Sanity", "JavaScript", "Vite", "Tailwind", "Sentry"],
         image:
-          "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop",
-        demoUrl: "https://demo-crypto.example.com",
-        githubUrl: "https://github.com/example/crypto-dashboard",
-        category: "Финтех",
-        featured: false,
+          "/images/slide-6.png",
+        demoUrl: "https://demo-realestate.example.com",
+        githubUrl: "https://github.com/example/real-estate",
+        category: "Landing",
+        featured: true,
       },
+
     ],
   },
 

@@ -1,9 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./SkillItem.module.scss";
-import { mockData } from "@/data/mock.js";
 import gsap from "gsap";
-// const { skills } = mockData;
 
 const ProgressBar = ({ level, color }: { level: number; color: string }) => {
   const [width, setWidth] = useState(0);
@@ -28,7 +26,7 @@ const ProgressBar = ({ level, color }: { level: number; color: string }) => {
 
 type Skill = {
   name: string;
-  icon: React.ReactNode;
+  icon: string;
   level: number;
   color: string;
 };
@@ -41,7 +39,6 @@ type Category = {
 const SkillItem = ({ category }: { category: Category }) => {
   const skillRefs = useRef<(HTMLLIElement | null)[]>([]);
 
-  // Анимация при наведении
   const handleMouseEnter = (idx: number) => {
     const el = skillRefs.current[idx];
     if (el) {
@@ -55,7 +52,6 @@ const SkillItem = ({ category }: { category: Category }) => {
     }
   };
 
-  // Анимация при уходе курсора
   const handleMouseLeave = (idx: number) => {
     const el = skillRefs.current[idx];
     if (el) {
@@ -77,18 +73,24 @@ const SkillItem = ({ category }: { category: Category }) => {
           <li
             className={styles.skill__item}
             key={skill.name}
-            ref={(el) => (skillRefs.current[idx] = el)}
+            ref={(el: HTMLLIElement | null) => {
+              if (el) {
+                skillRefs.current[idx] = el;
+              }
+            }}
             onMouseEnter={() => handleMouseEnter(idx)}
             onMouseLeave={() => handleMouseLeave(idx)}
           >
-            <span className={styles.skill__icon}>
-              <img
-                src={skill.icon}
-                alt={skill.name}
-                className={styles.skill__icon}
-              />
-            </span>
-            <span>{skill.name}</span>
+            <div className={styles.skill__item_header}>
+              <span className={styles.skill__icon}>
+                <img
+                  src={skill.icon}
+                  alt={skill.name}
+                  className={styles.skill__icon}
+                />
+              </span>
+              <span className={styles.skill__item_name}>{skill.name}</span>
+            </div>
             <ProgressBar level={skill.level} color={skill.color} />
           </li>
         ))}

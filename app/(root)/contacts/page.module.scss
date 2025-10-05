@@ -1,5 +1,19 @@
 .contacts {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    margin: 0 auto;
+    max-width: 70vw;
+}
+
+@media (max-width: 768px) {
+    .contacts {
+        max-width: 80vw;
+        padding: 0 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .contacts {
+        max-width: 90vw;
+        padding: 0 10px;
+    }
 }

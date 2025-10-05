@@ -6,7 +6,7 @@ import { CircleX } from "lucide-react";
 import Link from "next/link";
 import gsap from "gsap";
 
-// Define the type for project items
+
 type Project = {
   id: number;
   title: string;
@@ -27,10 +27,10 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ projects, title }) => {
   const [selected, setSelected] = useState<Project | null>(null);
   const modalRef = useRef<HTMLDivElement>(null);
 
-  // Массив рефов для всех карточек
+
   const cardRefs = useRef<(HTMLElement | null)[]>([]);
 
-  // Анимация при наведении
+
   const handleMouseEnter = (idx: number) => {
     const el = cardRefs.current[idx];
     if (el) {
@@ -44,7 +44,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ projects, title }) => {
     }
   };
 
-  // Анимация при уходе курсора
+
   const handleMouseLeave = (idx: number) => {
     const el = cardRefs.current[idx];
     if (el) {
@@ -58,7 +58,6 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ projects, title }) => {
     }
   };
 
-  // Анимация открытия модального окна
   const openModal = () => {
     if (modalRef.current) {
       gsap.fromTo(
@@ -69,7 +68,6 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ projects, title }) => {
     }
   };
 
-  // Анимация закрытия модального окна
   const closeModal = () => {
     if (modalRef.current) {
       gsap.to(modalRef.current, {
@@ -84,7 +82,6 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ projects, title }) => {
     }
   };
 
-  // Функция блокировки скролла
   const lockScroll = () => {
     if (typeof document !== "undefined") {
       document.documentElement.style.overflow = "hidden";
@@ -92,7 +89,6 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ projects, title }) => {
     }
   };
 
-  // Функция разблокировки скролла
   const unlockScroll = () => {
     if (typeof document !== "undefined") {
       document.documentElement.style.overflow = "";
@@ -100,7 +96,6 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ projects, title }) => {
     }
   };
 
-  // Обработчик клавиши Escape
   React.useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape" && selected) {
@@ -112,7 +107,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ projects, title }) => {
     return () => window.removeEventListener("keydown", handleEscape);
   }, [selected]);
 
-  // Блокировка скролла при открытии модального окна
+
   React.useEffect(() => {
     if (selected) {
       lockScroll();
@@ -125,7 +120,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ projects, title }) => {
     };
   }, [selected]);
 
-  // Запуск анимации при открытии модального окна
+
   React.useEffect(() => {
     if (selected && modalRef.current) {
       openModal();
@@ -219,7 +214,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ projects, title }) => {
               </div>
 
               <div className={styles.techContainerModal}>
-                <h4 className={styles.techTitle}>Технологии:</h4>
+                <h4 className={styles.techTitle}>Technologies:</h4>
                 <div className={styles.techTags}>
                   {selected.technologies.map((tech, index) => (
                     <span className={styles.techTag} key={index}>
@@ -243,8 +238,8 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ projects, title }) => {
                   className={styles.modalLink}
                   target="_blank"
                 >
-                  <img src="/icons/link.svg" alt="Демо" />
-                  <span>Демо</span>
+                  <img src="/icons/link.svg" alt="Demo" />
+                  <span>Demo</span>
                 </Link>
               </div>
             </div>
