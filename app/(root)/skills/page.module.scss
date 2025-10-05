@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-/* Десктопы (1200px+) */
+
 @media (min-width: 1200px) {
     .skills_page {
         grid-template-columns: repeat(3, minmax(350px, 1fr));
@@ -15,7 +15,6 @@
     }
 }
 
-/* Ноутбуки (1024px - 1199px) */
 @media (max-width: 1199px) and (min-width: 1024px) {
     .skills_page {
         grid-template-columns: repeat(2, minmax(300px, 1fr));
@@ -24,7 +23,6 @@
     }
 }
 
-/* Планшеты (768px - 1023px) */
 @media (max-width: 1023px) and (min-width: 768px) {
     .skills_page {
         grid-template-columns: repeat(2, minmax(280px, 1fr));
@@ -33,7 +31,6 @@
     }
 }
 
-/* Мобильные (480px - 767px) */
 @media (max-width: 767px) and (min-width: 480px) {
     .skills_page {
         grid-template-columns: 1fr;
@@ -42,7 +39,7 @@
     }
 }
 
-/* Маленькие мобильные (до 479px) */
+
 @media (max-width: 479px) {
     .skills_page {
         grid-template-columns: 1fr;

@@ -1,9 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./SkillItem.module.scss";
-import { mockData } from "@/data/mock.js";
 import gsap from "gsap";
-// const { skills } = mockData;
 
 const ProgressBar = ({ level, color }: { level: number; color: string }) => {
   const [width, setWidth] = useState(0);
@@ -41,7 +39,6 @@ type Category = {
 const SkillItem = ({ category }: { category: Category }) => {
   const skillRefs = useRef<(HTMLLIElement | null)[]>([]);
 
-  // Анимация при наведении
   const handleMouseEnter = (idx: number) => {
     const el = skillRefs.current[idx];
     if (el) {
@@ -55,7 +52,6 @@ const SkillItem = ({ category }: { category: Category }) => {
     }
   };
 
-  // Анимация при уходе курсора
   const handleMouseLeave = (idx: number) => {
     const el = skillRefs.current[idx];
     if (el) {
